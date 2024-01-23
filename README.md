@@ -2,7 +2,7 @@
 ## import pure-js-loader.js
 
 ```js
-<script src="pure-js-loader.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/pure-js-loader/loader.js" defer></script>
 ```
 
 ## write your js code
