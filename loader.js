@@ -18,7 +18,6 @@ window.VueMount = '#app'
 window.Vm = null
 
 window.registerJSLibrary = function (name, file) {
-    console.log(typeof name)
     if (typeof name === 'object') {
         Object.keys(name).forEach(k => {
             window.JsLibrary[k] = name[k]
@@ -72,7 +71,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         })
     }
 
-    console.log(jsFiles)
     for (var i = 0; i < jsFiles.length; i++) {
         await loadJsUrl(jsFiles[i].file)
         await sleep(50)
