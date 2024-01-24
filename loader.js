@@ -13,9 +13,6 @@ window.activeCss = {};
 window.activeJs = {};
 
 window.AfterLoad = null
-window.VueObject = null
-window.VueMount = '#app'
-window.Vm = null
 
 window.registerJSLibrary = function (name, file) {
     if (typeof name === 'object') {
@@ -80,10 +77,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         await window.AfterLoad()
     }
 
-    if (window.VueObject != null) {
-        window.Vm = mountVueObject(window.VueObject, window.VueMount)
-    }
-
 }, false);
 
 
@@ -120,15 +113,4 @@ function sleep(time) {
             resolve();
         }, time);
     });
-}
-
-function mountVueObject(object, element) {
-    if (Vue === undefined) {
-        console.log('mountVueObject, Vue not defined');
-        return
-    }
-
-    var vm = Vue.createApp(object)
-    vm.mount(element)
-    return vm
 }

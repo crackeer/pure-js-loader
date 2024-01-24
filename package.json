@@ -1,6 +1,6 @@
 {
   "name": "pure-js-loader",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "pure browser js loader",
   "main": "loader.js",
   "scripts": {
